@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  font-size: 3000px
+  font-size: 300;
   font-style: oblique;
   font-weight: 700;
   color: rgb(147, 141, 141);
@@ -20,7 +20,7 @@ header {
   margin-top: 30px;
 }
 
-h2 {
+h1 {
   font-size: 25px;
   font-weight: 100;
   margin: 0;
@@ -40,8 +40,8 @@ li {
   list-style: none;
 }
 .temperature {
-  font-size: 60px;
-  font-weight: 200;
+  font-size: 80px;
+  font-weight: 400;
 }
 .search-form {
   margin-bottom: 18px;
