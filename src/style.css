@@ -11,7 +11,8 @@ body {
 }
 
 header {
-  font-size: 1500;
+  padding: 30px;
+  font-size: 30px;
   font-style: oblique;
   font-weight: 700;
   color: rgb(147, 141, 141);
@@ -50,10 +51,4 @@ li {
 .units {
   position: relative;
   top: -34px;
-}
-
-footer {
-  font-size: small;
-  display: block;
-  margin: 0 auto;
 }
