@@ -9,6 +9,11 @@ function ShowWeather(response) {
   );
   document.querySelector("#weather-condition").innerHTML =
     response.data.weather[0].main;
+  let weatherIconElement = document.querySelector("#weatherIcon");
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function search(city) {
