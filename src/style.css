@@ -2,14 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-.weather-wrap {
-  border: 1px solid rgb(205, 200, 200);
-  border-radius: 4%;
-  margin: 15px;
-  max-width: 630px;
-  padding: 18px;
-}
-
 header {
   padding: 30px;
   font-size: 30px;
@@ -22,7 +14,7 @@ header {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 100;
   margin: 0;
   line-height: 30px;
@@ -41,14 +33,34 @@ li {
   list-style: none;
 }
 .temperature {
-  font-size: 80px;
-  font-weight: 400;
+  font-size: 70px;
+  font-weight: 300;
 }
 .search-form {
   margin-bottom: 18px;
 }
 
+.weather-wrap {
+  border: 1px solid rgb(205, 200, 200);
+  border-radius: 2%;
+  margin: 15px;
+  max-width: 630px;
+  padding: 18px;
+}
 .units {
   position: relative;
-  top: -34px;
+  top: -35px;
+  left: 5px;
+}
+.explanation {
+  color: rgb(147, 141, 141);
+}
+
+.weather-temperature .active {
+  color: rgb(147, 141, 141);
+  cursor: pointer;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }

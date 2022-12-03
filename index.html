@@ -19,9 +19,9 @@
     <div class="container">
       <div class="weather-wrap">
         <header>My Weather Trip</header>
-        <form class="search-form" id="search-form">
+        <form class="search-form" class="md-4" id="search-form">
           <div class="row">
-            <div class="col-8">
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Please include the city"
@@ -29,27 +29,36 @@
                 id="city-input"
               />
             </div>
-            <div class="col-2">
-              <input type="submit" value="search" class="form-control shadow" />
+            <div class="col-3">
+              <input
+                type="submit"
+                value="search"
+                class="form-control shadow w-100"
+              />
               <!--look class name -->
             </div>
           </div>
         </form>
         <h1 id="city"></h1>
         <ul>
-          <li id="weather-condition"></li>
+          <li id="weather-condition"><!--does not appearDescription:--></li>
+          <small class="explanation">Last update:</small>
           <li id="current-day"></li>
         </ul>
         <div class="row">
-          <div class="col-6">
-            <img src="" alt="rain icon" id="weatherIcon" />
-            <span class="temperature" id="temperature"> </span
-            ><span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
+          <div class="col-8">
+            <div class="d-flex weather-temperature">
+              <img src="" alt="icon" id="weatherIcon" />
+              <div class="float-left">
+                <span class="temperature" id="temperature"> </span>
+                <span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="col-6">
+          <div class="col-4">
             <ul>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind"> </span> km/h</li>
@@ -64,7 +73,9 @@
           target="_blank"
         >
           GitHub</a
-        ></small
+        >
+        and hosted on
+        <a href="fantastic-haupia-a0703" target="_blank"> Netlify</a></small
       >
     </div>
     <script src="src/index.js"></script>
