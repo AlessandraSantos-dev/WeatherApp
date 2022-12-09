@@ -1,3 +1,32 @@
+let currentDay = document.querySelector("#current-day");
+let now = new Date();
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+let day = now.getDay();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+currentDay.innerHTML = `${days[day]} ${hours}:${minutes}`;
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function ShowWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -55,10 +84,8 @@ function showForecast(response) {
 
   let forecastHTML = `<div class= "row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
-      forecastHTML =
-        forecastHTML +
-        `
+    if (index < 6) {
+      forecastHTML += `
       <div class="col-2">
         <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
        
@@ -86,12 +113,6 @@ function showForecast(response) {
 
   forecastElement.innerHTML = forecastHTML;
 }
-function formatDay(timestamp) {
-  let date = new date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[day];
-}
 
 function getForecast(coordinates) {
   let apiKey = "e450bc345a80a08ada69fd5c714d871d";
@@ -111,24 +132,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Lisbon");
-let currentDay = document.querySelector("#current-day");
-let now = new Date();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let day = now.getDay();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-currentDay.innerHTML = `${days[day]} ${hours}:${minutes}`;
