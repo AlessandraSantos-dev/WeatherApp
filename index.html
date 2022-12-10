@@ -17,10 +17,9 @@
   <body>
     <div class="container">
       <div class="weather-wrap">
-        <header>My Weather Trip</header>
         <form class="search-form" class="md-4" id="search-form">
           <div class="row">
-            <div class="col-6">
+            <div class="col-8">
               <input
                 type="search"
                 placeholder="Please include the city"
@@ -28,11 +27,11 @@
                 id="city-input"
               />
             </div>
-            <div class="col-2 btn">
+            <div class="col-4">
               <input
                 type="submit"
-                value="search"
-                class="form-control shadow w-80"
+                value="Search"
+                class="form-control shadow w-50"
               />
               <!--look class name -->
             </div>
@@ -51,13 +50,12 @@
               <div class="float-left">
                 <span class="temperature" id="temperature"> </span>
                 <span class="units"
-                  ><a href="#" id="celsius-link" class="active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
+                  ><a href="#" id="celsius-link" class="active">°C</a>
                 </span>
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-3">
             <ul>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind"> </span> km/h</li>
@@ -67,15 +65,15 @@
         <div class="weather-forecast" id="weather-forecast">
           <div class="row">
             <div class="col-2">
-              <div class="forecast-date">Thu</div>
+              <div class="forecast-date"></div>
               <img
                 src="http://openweathermap.org/img/wn/03d@2x.png"
                 alt=""
                 width="42"
               />
               <div class="forecast-temperature">
-                <span class="forecast-temperature-max">18ºC</span>
-                <span class="forecast-temperature-min">12ºC</span>
+                <span class="forecast-temperature-max"></span>
+                <span class="forecast-temperature-min"></span>
               </div>
             </div>
           </div>
